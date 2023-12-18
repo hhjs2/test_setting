@@ -21,7 +21,7 @@
 	"scripts": {
 		"start": "react-scripts start",
 		"build": "react-scripts build",
-		"test": "react-scripts test",
+		"test": "react-scripts test --transformIgnorePatterns \"node_modules/(?!axios)/\"",
 		"eject": "react-scripts eject",
 		"lint": "eslint . --fix",
 		"prepare": "husky install"
@@ -49,11 +49,6 @@
 		"eslint-plugin-prettier": "^5.0.1",
 		"husky": "^8.0.3",
 		"lint-staged": "^15.2.0"
-	},
-	"husky": {
-		"hooks": {
-			"pre-commit": "lint-staged"
-		}
 	},
 	"lint-staged": {
 		"src/**/*.{js,jsx,ts,tsx}": "eslint --cache --fix",
